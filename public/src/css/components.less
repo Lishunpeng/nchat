@@ -1,0 +1,72 @@
+// fork按钮
+
+@forkMeButtomWidth: 4rem;
+@forkMeButtomHeight: @forkMeButtomWidth;
+
+// 顶栏组件
+
+.top-title {
+  height: @boxTopHeight;
+  line-height: @boxTopHeight;
+  background-color: @colorMain;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  font-size: @fontTitle;
+  color: white;
+}
+.top-prev, .top-next {
+  top: 0;
+  color: white;
+  width: 0.8rem;
+}
+.top-prev {
+  position: absolute;
+  left: 0;
+}
+.top-next {
+  position: absolute;
+  right: 0;
+}
+
+// MetroBox
+
+@metroBoxGap: 0.1rem;
+@metroBoxWidth: (@baseWidth - @metroBoxGap * 3) / 2;
+@metroBoxHeight: @metroBoxWidth;
+
+// 盒子组件
+
+@marginBox: 0.2rem;
+@paddingBox: 0.2rem;
+
+.box-list-wrap {
+  margin: @marginBox 0;
+  overflow-y: scroll;
+  height: 12rem;
+  .box-list {
+    background-color: white;
+    & + .box-list {
+      margin-top: @marginBox / 2;
+    }
+  }
+  .box-link {
+    padding: @paddingBox;
+    display: block;
+    .box-name, .box-desc {
+      color: black;
+    }
+    .box-desc {
+      padding-top: @marginBox / 2;
+    }
+  }
+}
+
+// 输入框样式
+
+.input-default {
+  width: @baseWidth - @paddingBox * 4;
+  padding: @paddingInput;
+  font-size: @fontInput;
+  margin-bottom: @paddingBox * 1.5;
+}

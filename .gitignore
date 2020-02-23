@@ -1,0 +1,7 @@
+.DS_Store
+node_modules
+*.sock
+sessions
+public/dist
+mongo
+npm-debug.log
