@@ -78,14 +78,16 @@ router.get('/user/:id', (req, res, next) => {
           img: val.img,
           city: val.city,
           hobbies: val.hobbies,
+          isMe:false
         }
         let renderObj = {}
         if (tokenObjUser === req.params.id) {
-          renderObj = Object.assign({}, renderObjBase, {nextButton})
+          renderObj = Object.assign({}, renderObjBase, {nextButton , isMe:true})
         }
         else {
           renderObj = Object.assign({}, renderObjBase)
         }
+        console.log(renderObj,"renderObj");
         res.render('userInfo', renderObj)
       }
     })
@@ -167,10 +169,10 @@ router.get('/login', (req, res, next) => {
 })
 
 // 忘记密码页面
-router.get('/forget', (req, res, next) => res.send('<h1>Page is building.</h1>') )
+router.get('/forget', (req, res, next) => res.send('<h1>暂不支持！</h1>') )
 
 // 修改密码页面
-router.get('/changepass', (req, res, next) => res.send('<h1>Page is building.</h1>') )
+router.get('/changepass', (req, res, next) => res.send('<h1>暂不支持！.</h1>') )
 
 // 关于页面
 

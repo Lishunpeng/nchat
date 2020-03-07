@@ -12,9 +12,9 @@
   const changImgArr = ['men', 'women', 'random']
 
   // 监听点击头像换图片
-  userInfoImg.addEventListener('click', (e) => {
-    userDisImg.src = getRandomImg(changImgArr[userInfoGenderWrap.value])
-  }, false)
+  // userInfoImg.addEventListener('click', (e) => {
+  //   userDisImg.src = getRandomImg(changImgArr[userInfoGenderWrap.value])
+  // }, false)
 
   // 监听信息修改按钮的点击事件
   infoModBtn.addEventListener('click', (e) => {

@@ -27,7 +27,7 @@
     onlineUserCount: 0,
     onlineUserList: [],
     onlineUserListImg: [],
-    defaultUserImg: 'https://randomuser.me/api/portraits/women/50.jpg',
+    defaultUserImg: '/image/boysIcon.png',
     welcomeInfo: '系统: 欢迎来到 ',
     // 房间ID
     currentRoomName: null,
@@ -36,14 +36,14 @@
       name: null,
       pass: null,
       desc: null,
-      img: 'https://randomuser.me/api/portraits/men/1.jpg',
+      img: '/image/boysIcon.png',
       sex: 'men'
     },
     robot: {
       api: `${document.location.origin}/api/robot/openapi/api`,
       key: '57a5b6849e2b4d47ae0badadf849c261',
       nick: '小美',
-      img: 'https://randomuser.me/api/portraits/women/60.jpg'
+      img: '/image/boysIcon.png'
     }
   }
   // 房间（socket通讯）
@@ -139,7 +139,7 @@
       parentDOM.appendChild(childDOM)
     },
     renderUserList (userImg, userName) {
-      const ctx = `<img src="${userImg}" class="user-img">
+      const ctx = `<img src="/image/boysIcon.png" class="user-img">
         <span class="user-name">${userName}</span>`
       return ctx
     },
@@ -167,7 +167,7 @@
       img = img.replace(/on[a-zA-z]+=/, '')
       const ctx = `<div class="bubble bubble-${type}">
         <div class="bubble-head">
-          <img src=${img} class="user-img">
+          <img src="/image/boysIcon.png" class="user-img">
         </div>
         <div class="bubble-ctx">
           ${bubbleInfoEl}

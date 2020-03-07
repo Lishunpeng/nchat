@@ -47,11 +47,11 @@ router.post('/api/user/register', (req, res, next) => {
     else if (val !== null) {
       res.send({
         msgCode:304,
-        msgCtx: 'User is exist.',
+        msgCtx: '注册失败！用户已存在',
       })
     }
     else {
-      const defaultUserImg = 'https://randomuser.me/api/portraits/men/1.jpg'
+      const defaultUserImg = '/src/image/boysIcon.png'
 
       // 设置别名
       const name = req.body.name
@@ -106,13 +106,13 @@ router.post('/api/user/login', (req, res, next) => {
     else if (val === null) {
       res.send({
         msgCode:404,
-        msgCtx: 'User is not exist.',
+        msgCtx: '用户不存在！',
       })
     }
     else if(val.pass !== pass) {
       res.send({
         msgCode:403,
-        msgCtx: `Pass is incorrect.`,
+        msgCtx: `密码不正确！`,
       })
     }
     else {
@@ -142,7 +142,7 @@ router.post('/api/user/logout', (req, res, next) => {
   else {
     res.send({
       msgCode:304,
-      msgCtx: 'You have not login.'
+      msgCtx: '你还未登陆.'
     })
   }
 })
@@ -165,7 +165,7 @@ router.get('/api/user/info/:id', (req, res, next) => {
       else if (val === null) {
         res.send({
           msgCode:404,
-          msgCtx: 'User not exist.',
+          msgCtx: '用户不存在.',
         })
       }
       else {

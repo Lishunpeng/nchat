@@ -1,13 +1,15 @@
 <div class="user-info-wrap animated fadeIn">
-  <div class="user-info-img-wrap">
-    <img class="user-info-img" src=<%= img %>>
+  <div class="user-info-img-wrap" style="margin-bottom: 30px;">
+    <img class="user-info-img" src='/image/boysIcon.png'>
   </div>
   <ul>
     <li class="user-info">用户 <%= user %></li>
-    <li class="user-info">性别 <%= gender %></li>
+    <li class="user-info">性别 <%= gender == 'secure' ? '保密' : gender %></li>
     <li class="user-info">城市 <%= city %></li>
     <li class="user-info">爱好 <%= hobbies === '' ? 未填写 : hobbies %></li>
   </ul>
+  
+  <div class=<%= isMe ? '' : 'btn' %></div> ><%= isMe ? '' : '添加好友' %></div>
   <!-- <a href="">注销登陆</a> -->
   <span class="info-tip"></span>
 </div>
