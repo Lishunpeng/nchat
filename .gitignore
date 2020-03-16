@@ -3,5 +3,4 @@ node_modules
 *.sock
 sessions
 mongo
-public/dist
 npm-debug.log
